@@ -50,6 +50,7 @@
         android:textSize="19dp"
         android:textColor="@color/S_green"
         android:textStyle="bold"
+
         android:fontFamily="@font/metalmania_regular"/>
 
 </LinearLayout>
