@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Splash_Screen"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="220dp"
+        android:layout_height="220dp"
+        android:src="@drawable/logo"
+        android:layout_gravity="center"
+        android:layout_marginTop="100dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/metalmania_regular"
+        android:gravity="center"
+        android:text="Dish Flow"
+        android:textSize="60dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Deliever Your Food"
+        android:gravity="center"
+        android:layout_marginTop="16dp"
+        android:textSize="14sp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Design By\n Harsh"
+        android:gravity="center"
+        android:layout_marginTop="240dp"
+        android:textSize="19dp"
+        android:textColor="@color/S_green"
+        android:textStyle="bold"
+        android:fontFamily="@font/metalmania_regular"/>
+
+</LinearLayout>

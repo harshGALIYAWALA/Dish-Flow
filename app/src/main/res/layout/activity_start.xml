@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".StartActivity"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="310dp"
+        android:layout_height="310dp"
+        android:src="@drawable/g10"
+        android:layout_gravity="center"
+        android:layout_marginTop="40dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/metalmania_regular"
+        android:gravity="center"
+        android:text="Enjoy Restauant Quality Meals\n At Home"
+        android:textAlignment="center"
+        android:textColor="@color/S_green"
+        android:textSize="20sp"
+        />
+
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/next_btn"
+        android:layout_width="150dp"
+        android:layout_height="57dp"
+        android:text="Next"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        android:fontFamily="@font/metalmania_regular"
+        android:layout_gravity="center"
+        android:layout_marginTop="190dp"
+        android:background="@drawable/green_btn"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Design By\n Harsh"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        android:textSize="19dp"
+        android:textColor="@color/S_green"
+        android:textStyle="bold"
+        android:fontFamily="@font/metalmania_regular"/>
+
+</LinearLayout>
