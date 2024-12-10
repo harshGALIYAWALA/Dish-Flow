@@ -5,15 +5,15 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LoginActivity"
+    tools:context=".SignUpActivity"
     android:orientation="vertical">
-    
+
     <ImageView
         android:layout_width="91dp"
         android:layout_height="92dp"
         android:layout_gravity="center"
         android:src="@drawable/logo"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="20dp"
         />
 
     <TextView
@@ -29,23 +29,35 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Deliever Your Food"
-        android:fontFamily="@font/lato_regular"
         android:layout_gravity="center"
         android:layout_marginTop="8dp"
         android:textSize="16sp"
+        android:fontFamily="@font/lato_regular"
         android:textColor="@color/E_green"
         />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Login To Your Account"
+        android:text="Sign Up here"
         android:layout_gravity="center"
         android:layout_marginTop="10dp"
         android:textSize="23sp"
         android:textColor="@color/E_green"
         android:fontFamily="@font/metalmania_regular"
         android:textStyle="bold"/>
+
+    <EditText
+        android:layout_width="325dp"
+        android:layout_height="57dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/edit_text_bg"
+        android:hint="Name"
+        android:fontFamily="@font/lato_regular"
+        android:inputType="textEmailAddress"
+        android:elevation="5dp"
+        android:padding="9dp" />
 
     <EditText
         android:layout_width="325dp"
@@ -76,9 +88,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="16dp"
-        android:fontFamily="@font/metalmania_regular"
-        android:text="Or" />
+        android:text="Or"
+        android:layout_marginTop="16dp"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -110,22 +121,22 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/facebook_logo"
-                        android:layout_gravity="center_vertical"
-                        android:layout_marginLeft="20dp"/>
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/facebook_logo"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="20dp"/>
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Facebook"
-                        android:fontFamily="@font/lato_regular"
-                        android:layout_gravity="center_vertical"
-                        android:textSize="20dp"
-                        android:textStyle="bold"
-                        android:layout_marginLeft="5dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Facebook"
+                    android:layout_gravity="center_vertical"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/lato_regular"
+                    android:layout_marginLeft="5dp"/>
 
 
             </LinearLayout>
@@ -159,12 +170,12 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:layout_marginLeft="5dp"
-                    android:fontFamily="@font/lato_regular"
                     android:text="Google"
+                    android:layout_gravity="center_vertical"
                     android:textSize="20dp"
-                    android:textStyle="bold" />
+                    android:fontFamily="@font/lato_regular"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="5dp"/>
 
 
             </LinearLayout>
@@ -178,7 +189,7 @@
         android:id="@+id/next_btn"
         android:layout_width="150dp"
         android:layout_height="57dp"
-        android:text="Login"
+        android:text="Sign up"
         android:textSize="20sp"
         android:textColor="@color/white"
         android:fontFamily="@font/metalmania_regular"
@@ -187,13 +198,13 @@
         android:background="@drawable/green_btn"/>
 
     <TextView
-        android:id="@+id/ridirect_to_signUp"
+        android:id="@+id/ridirect_to_login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Don’t Have Account?"
+        android:text="Already Have An Account?"
+        android:fontFamily="@font/lato_regular"
         android:layout_gravity="center"
         android:textColor="@color/E_green"
-        android:fontFamily="@font/lato_regular"
         android:layout_marginTop="10dp"/>
 
 </LinearLayout>

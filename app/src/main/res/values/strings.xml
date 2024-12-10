@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Dish Flow</string>
+    <string name="chooseLocation_txt">To provide you with the best dining experience, we need your permission to access your device\'s location. By enabling location services, we can offer personalized restaurant recommendations, accurate delivery estimates, and ensure a seamless food delivery experience.</string>
 </resources>
