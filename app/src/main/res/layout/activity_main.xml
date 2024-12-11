@@ -5,8 +5,62 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:fitsSystemWindows="true"
+    tools:context=".activities.MainActivity"
+    android:orientation="vertical">
 
+
+
+
+    <LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Explore Your Favorite Food"
+        android:textSize="24dp"
+        android:fontFamily="@font/metalmania_regular"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="16dp"/>
+
+    <ImageView
+        android:id="@+id/bellIcon"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:src="@drawable/bell_01"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="100dp"/>
+
+    </LinearLayout>
+
+        <!-- FragmentContainerView in the middle -->
+    <fragment
+        android:id="@+id/fragmentContainerView"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="16dp"
+        app:defaultNavHost="true"
+        app:navGraph="@navigation/navigation"
+        tools:layout="@layout/fragment_home"/>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+    android:id="@+id/bottomNavigationView"
+    android:layout_width="match_parent"
+    android:layout_height="65dp"
+    app:menu="@menu/menu_nav_view"
+    android:padding="0dp"
+    android:layout_margin="0dp"/>
 
 
 </LinearLayout>
+
+
+

@@ -1,27 +1,28 @@
-package com.example.dishflow
+package com.example.dishflow.activities
 
 import android.content.Intent
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.example.dishflow.databinding.ActivitySignUpBinding
+import com.example.dishflow.R
 
-class SignUpActivity : AppCompatActivity() {
 
-    private val binding: ActivitySignUpBinding by lazy {
-        ActivitySignUpBinding.inflate(layoutInflater)
-    }
-
+class Splash_Screen : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(binding.root)
+        setContentView(R.layout.activity_splash_screen)
 
-        binding.ridirectToLogin.setOnClickListener {
-            startActivity(Intent(this, LoginActivity::class.java))
-        }
+        Handler(Looper.getMainLooper()).postDelayed({
+            val intent = Intent(this, StartActivity::class.java)
+            startActivity(intent)
+            finish()
+        }, 3000)
+
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
