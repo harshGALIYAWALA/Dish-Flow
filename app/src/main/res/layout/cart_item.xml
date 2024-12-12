@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="102dp "
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="323dp"
+        android:layout_height="87dp"
+        app:cardCornerRadius="22dp"
+        android:layout_gravity="center_horizontal"
+        android:elevation="10dp"
+        android:layout_marginTop="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/cartImage"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:src="@drawable/google_logo"
+                android:layout_gravity="center_vertical"
+                android:scaleType="centerCrop"
+                android:layout_marginLeft="10dp"/>
+
+<!--            foodName and Price Layout-->
+            <LinearLayout
+                android:layout_width="120dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/cartFoodName"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="Herbal Pancake"
+                    android:layout_gravity="center_vertical"
+                    android:textSize="16dp"
+                    android:layout_marginTop="14dp"
+                    android:fontFamily="@font/metalmania_regular"
+                    android:gravity="center_horizontal"/>
+
+
+                <TextView
+                    android:id="@+id/cartItemPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="$15"
+                    android:textSize="25dp"
+                    android:textColor="@color/E_green"
+                    android:fontFamily="@font/lato_bold"
+                    android:layout_marginTop="8dp"
+                    android:layout_gravity="center_horizontal"/>
+
+            </LinearLayout>
+            
+            
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                
+<!--                product count-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="43dp"
+                    android:layout_marginRight="4dp">
+                    
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/minusButton"
+                        android:layout_width="26dp"
+                        android:layout_height="26dp"
+                        android:background="@drawable/green_btn"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/lato_bold"
+                        android:text="-"
+                        android:elevation="3dp"/>
+                    
+                    <TextView
+                        android:id="@+id/cartItemQuantity"
+                        android:layout_width="15dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center_vertical"
+                        android:text="1"
+                        android:textSize="16dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_weight="1"
+                        android:textAlignment="center"
+                        android:fontFamily="@font/lato_bold"/>
+
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/plusButton"
+                        android:layout_width="26dp"
+                        android:layout_height="26dp"
+                        android:background="@drawable/green_btn"
+                        android:layout_gravity="center_vertical"
+                        android:text="+"
+                        android:fontFamily="@font/lato_bold"
+                        android:layout_marginLeft="15dp"
+                        android:layout_weight="1"
+                        android:elevation="3dp"/>
+                    
+                </LinearLayout>
+                
+                <ImageView
+                    android:id="@+id/delteButton"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/trash_03"
+                    android:layout_gravity="center_horizontal" />
+
+            </LinearLayout>
+           
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>
+
+

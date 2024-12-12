@@ -24,7 +24,7 @@
                 android:src="@drawable/google_logo"
                 android:layout_gravity="center_vertical"
                 android:scaleType="centerCrop"
-                android:layout_marginLeft="30dp"/>
+                android:layout_marginLeft="10dp"/>
             
             <TextView
                 android:id="@+id/foodnamePopular"
