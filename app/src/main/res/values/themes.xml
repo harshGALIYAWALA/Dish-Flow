@@ -1,8 +1,25 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
     <style name="Base.Theme.DishFlow" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <!-- Primary Colors -->
+        <item name="colorPrimary">@color/green_primary</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorPrimaryContainer">@color/green_primary_container</item>
+        <item name="colorOnPrimaryContainer">@color/black</item>
+
+<!--        &lt;!&ndash; Secondary Colors &ndash;&gt;-->
+<!--        <item name="colorSecondary">@color/green_secondary</item>-->
+<!--        <item name="colorOnSecondary">@color/white</item>-->
+<!--        <item name="colorSecondaryContainer">@color/green_secondary_container</item>-->
+<!--        <item name="colorOnSecondaryContainer">@color/black</item>-->
+
+<!--        &lt;!&ndash; Background and Surface Colors &ndash;&gt;-->
+<!--        <item name="colorSurface">@color/green_surface</item>-->
+<!--        <item name="colorOnSurface">@color/black</item>-->
+
+<!--        &lt;!&ndash; Other Components &ndash;&gt;-->
+<!--        <item name="android:statusBarColor">@color/green_primary</item>-->
+<!--        <item name="android:navigationBarColor">@color/green_primary_container</item>-->
     </style>
 
     <style name="Theme.DishFlow" parent="Base.Theme.DishFlow" />

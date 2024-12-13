@@ -27,7 +27,7 @@ class CardFragment : Fragment() {
 
         val cartFoodName = listOf("burger", "pizza", "pasta", "cake")
         val CartItemPrice = listOf("$10", "$15", "$20", "$25")
-        val CartImages = listOf(R.drawable.google_logo, R.drawable.google_logo, R.drawable.google_logo, R.drawable.google_logo)
+        val CartImages = listOf(R.drawable.menu_item_food, R.drawable.menu_item_food02, R.drawable.menu_item_food, R.drawable.menu_item_food02)
         val adapter = CartAdapter(ArrayList(cartFoodName), ArrayList(CartItemPrice), ArrayList(CartImages))
         binding.cartrecyclerView.layoutManager = LinearLayoutManager(requireContext())
         binding.cartrecyclerView.adapter = adapter

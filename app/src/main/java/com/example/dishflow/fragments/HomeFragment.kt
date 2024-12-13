@@ -29,10 +29,14 @@ class HomeFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
        binding = FragmentHomeBinding.inflate(inflater, container, false)
+
+        // onclicklisten for menu button to show bottomSheet
+        binding.viewAllMenu.setOnClickListener{
+            val bottomSheetDialog = MenuBottomSheetFragment()
+            bottomSheetDialog.show(parentFragmentManager, "Test")
+        }
+
         return binding.root
-
-
-
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -61,7 +65,7 @@ class HomeFragment : Fragment() {
         })
 
         val foodName = listOf("burger", "sandwich", "pizza", "cake")
-        val image = listOf(R.drawable.google_logo, R.drawable.facebook_logo, R.drawable.logo, R.drawable.google_logo)
+        val image = listOf(R.drawable.menu_item_food, R.drawable.menu_item_food02, R.drawable.menu_item_food, R.drawable.menu_item_food02)
         val price = listOf("$15", "$15", "$15", "$15")
 
         val adapter = PopularAdapter(foodName, image, price)

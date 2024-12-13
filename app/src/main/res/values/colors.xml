@@ -7,4 +7,12 @@
     <color name="E_green">#15BE77</color>
 
 
+    <color name="green_primary">#4CAF50</color> <!-- Main Green -->
+    <color name="green_primary_container">#A5D6A7</color> <!-- Light Green Container -->
+    <color name="green_secondary">#388E3C</color> <!-- Dark Green Secondary -->
+    <color name="green_secondary_container">#C8E6C9</color> <!-- Light Green Secondary -->
+    <color name="green_background">#E8F5E9</color> <!-- Very Light Green Background -->
+    <color name="green_surface">#F1F8E9</color> <!-- Light Surface Green -->
+
+
 </resources>
