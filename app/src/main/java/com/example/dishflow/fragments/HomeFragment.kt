@@ -43,9 +43,9 @@ class HomeFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         //image list for slider
         val imageList = ArrayList<SlideModel>()
-        imageList.add(SlideModel(R.drawable.facebook_logo, ScaleTypes.FIT))
-        imageList.add(SlideModel(R.drawable.logo, ScaleTypes.FIT))
-        imageList.add(SlideModel(R.drawable.google_logo, ScaleTypes.FIT))
+        imageList.add(SlideModel(R.drawable.menu_item_food02, ScaleTypes.FIT))
+        imageList.add(SlideModel(R.drawable.menu_item_food, ScaleTypes.FIT))
+        imageList.add(SlideModel(R.drawable.menu_item_food02, ScaleTypes.FIT))
 
         val imageSlider = binding.imageSlider
         imageSlider.setImageList(imageList)
