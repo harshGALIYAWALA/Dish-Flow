@@ -61,6 +61,8 @@ class HomeFragment : Fragment() {
                 val itemPosition = imageList[position]
                 val itemMessage = "selected image $position"
                 Toast.makeText(requireContext(), itemMessage, Toast.LENGTH_LONG).show()
+
+                // nothing
             }
         })
 
