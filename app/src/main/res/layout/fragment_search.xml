@@ -4,9 +4,18 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".fragments.SearchFragment"
-    android:background="@color/little_dark_green"
     android:orientation="vertical">
 
-    
+    <SearchView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:iconifiedByDefault="false"
+        android:background="@drawable/search_shape"
+        android:searchIcon="@drawable/search_icon"
+        android:queryBackground="@android:color/transparent"
+        android:queryHint="What do you want to eat?"/>
 
 </LinearLayout>
