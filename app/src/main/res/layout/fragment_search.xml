@@ -7,6 +7,7 @@
     android:orientation="vertical">
 
     <SearchView
+        android:id="@+id/searchView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
@@ -16,6 +17,12 @@
         android:background="@drawable/search_shape"
         android:searchIcon="@drawable/search_icon"
         android:queryBackground="@android:color/transparent"
-        android:queryHint="What do you want to eat?"/>
+        android:queryHint="What do you want to eat?" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/menuRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="16dp"/>
 
 </LinearLayout>

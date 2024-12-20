@@ -5,56 +5,68 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.SearchView
+
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.dishflow.R
+import com.example.dishflow.adaptar.MenuAdapter
+import com.example.dishflow.databinding.FragmentSearchBinding
+import com.example.dishflow.models.MenuItem
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-/**
- * A simple [Fragment] subclass.
- * Use the [SearchFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class SearchFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
-    }
+    private lateinit var binding: FragmentSearchBinding
+//    private lateinit var adapter: MenuAdapter
+//    private val originalMenuItems = listOf(
+//        MenuItem("Burger", "$2", R.drawable.menu_item_food),
+//        MenuItem("Sandwich", "$5", R.drawable.menu_item_food02),
+//        MenuItem("Pizza", "$2", R.drawable.menu_item_food),
+//        MenuItem("Cake", "$5", R.drawable.menu_item_food02),
+//        MenuItem("Burger", "$4", R.drawable.menu_item_food),
+//        MenuItem("Sandwich", "$5", R.drawable.menu_item_food02),
+//        MenuItem("Pizza", "$7", R.drawable.menu_item_food),
+//        MenuItem("Cake", "$5", R.drawable.menu_item_food02)
+//    )
+
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_search, container, false)
+    ): View {
+        binding = FragmentSearchBinding.inflate(inflater, container, false)
+
+//        adapter = MenuAdapter(originalMenuItems)
+//        binding.menuRecyclerView.layoutManager = LinearLayoutManager(requireContext())
+//        binding.menuRecyclerView.adapter = adapter
+//
+//        setUpSearchView()
+
+        return binding.root
     }
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment SearchFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            SearchFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
-            }
-    }
+//    private fun setUpSearchView() {
+//        binding.searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
+//            override fun onQueryTextSubmit(query: String?): Boolean {
+//                filterMenuList(query)
+//                return true
+//            }
+//
+//            override fun onQueryTextChange(newText: String?): Boolean {
+//                filterMenuList(newText)
+//                return true
+//            }
+//        })
+//    }
+
+//    private fun filterMenuList(query: String?) {
+//        if (query.isNullOrEmpty()) {
+//            adapter.updateList(originalMenuItems)
+//        } else {
+//            val filteredList = originalMenuItems.filter {
+//                it.name.contains(query, ignoreCase = true)
+//            }
+//            adapter.updateList(filteredList)
+//        }
+//    }
 }
