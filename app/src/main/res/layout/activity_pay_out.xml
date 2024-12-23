@@ -189,13 +189,14 @@
 
 
     <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/placeMyOderBtn"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
         android:layout_marginBottom="10dp"
         android:background="@drawable/green_btn"
-        android:text="Save Information"
+        android:text="Place Order"
         android:textColor="@color/white"
         android:fontFamily="@font/lato_regular"
         android:textSize="18dp"

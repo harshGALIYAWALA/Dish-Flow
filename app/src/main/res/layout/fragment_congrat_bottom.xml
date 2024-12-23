@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.CongratBottomFragment"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Congrats"
+        android:textColor="@color/E_green"
+        android:textSize="25sp"
+        android:layout_marginTop="20dp"
+        android:gravity="center_horizontal"
+        android:fontFamily="@font/metalmania_regular"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Your Order Placed"
+        android:textColor="@color/E_green"
+        android:textSize="25sp"
+        android:fontFamily="@font/metalmania_regular"
+        android:gravity="center_horizontal"
+        />
+
+
+    <ImageView
+        android:layout_width="172dp"
+        android:layout_height="162dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="24dp"
+        android:src="@drawable/illustration"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/goHome"
+        android:layout_width="157dp"
+        android:layout_height="57dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/green_btn"
+        android:text="Go Home"
+        android:textColor="@color/white"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/lato_bold"/>
+
+</LinearLayout>

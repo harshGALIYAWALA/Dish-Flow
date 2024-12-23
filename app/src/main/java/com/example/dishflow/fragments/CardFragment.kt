@@ -1,5 +1,6 @@
 package com.example.dishflow.fragments
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -7,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.dishflow.R
+import com.example.dishflow.activities.PayOutActivity
 import com.example.dishflow.adaptar.CartAdapter
 import com.example.dishflow.databinding.FragmentCardBinding
 
@@ -34,7 +36,13 @@ class CardFragment : Fragment() {
 
 
         //Proceed set on clicl listen to PayOut Activity
-        
+        binding.proceesBTN.setOnClickListener{
+            val intent = Intent(requireContext(), PayOutActivity::class.java)
+            startActivity(intent)
+        }
+
+
+
 
 
         return binding.root
