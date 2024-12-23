@@ -33,6 +33,10 @@ class CardFragment : Fragment() {
         binding.cartrecyclerView.adapter = adapter
 
 
+        //Proceed set on clicl listen to PayOut Activity
+        
+
+
         return binding.root
     }
 

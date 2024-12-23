@@ -1,12 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".fragments.ProfileFragment"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context=".activities.PayOutActivity">
 
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/back_press_icon"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="16dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Edit"
+        android:textSize="24sp"
+        android:textColor="@color/E_green"
+        android:fontFamily="@font/metalmania_regular"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="8dp"/>
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
@@ -33,7 +51,7 @@
                 android:layout_height="match_parent"
                 android:layout_marginLeft="8dp"
                 android:background="@drawable/profile_edit_text"
-                android:hint="sam.."/>
+                android:text="Sam"/>
         </LinearLayout>
 
     </androidx.cardview.widget.CardView>
@@ -72,41 +90,6 @@
     </androidx.cardview.widget.CardView>
 
 
-
-
-    <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:elevation="5dp"
-        app:cardCornerRadius="15dp"
-        android:layout_margin="16dp">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <TextView
-                android:layout_width="70dp"
-                android:layout_height="match_parent"
-                android:text="Email"
-                android:gravity="center_vertical"
-                android:layout_marginLeft="10dp"
-                android:textSize="20sp"
-                android:fontFamily="@font/metalmania_regular"/>
-
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="8dp"
-                android:background="@drawable/profile_edit_text"
-                android:inputType="textEmailAddress"
-                android:hint="sam@gmail.com..."/>
-        </LinearLayout>
-
-    </androidx.cardview.widget.CardView>
-
-
-
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="60dp"
@@ -139,25 +122,83 @@
     </androidx.cardview.widget.CardView>
 
 
-    <LinearLayout
+    <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:gravity="bottom">
+        android:layout_height="60dp"
+        android:elevation="5dp"
+        app:cardCornerRadius="15dp"
+        android:layout_margin="16dp">
 
-        <androidx.appcompat.widget.AppCompatButton
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
-            android:layout_marginBottom="10dp"
-            android:background="@drawable/green_btn"
-            android:text="Save Information"
-            android:textColor="@color/white"
-            android:fontFamily="@font/lato_regular"
-            android:textSize="18dp"
-            android:layout_marginTop="280dp"/>
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="70dp"
+                android:layout_height="match_parent"
+                android:text="Payment Method "
+                android:gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:textSize="20sp"
+                android:fontFamily="@font/metalmania_regular"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="8dp"
+                android:background="@drawable/profile_edit_text"
+                android:inputType="phone"
+                android:text="Cash on Delivery"/>
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
 
 
-    </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:elevation="5dp"
+        app:cardCornerRadius="15dp"
+        android:layout_margin="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="70dp"
+                android:layout_height="match_parent"
+                android:text="Total Amount "
+                android:gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:textSize="20sp"
+                android:fontFamily="@font/metalmania_regular"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="8dp"
+                android:background="@drawable/profile_edit_text"
+                android:inputType="phone"
+                android:text="35$"/>
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/green_btn"
+        android:text="Save Information"
+        android:textColor="@color/white"
+        android:fontFamily="@font/lato_regular"
+        android:textSize="18dp"
+        android:layout_marginTop="30dp"/>
+
 </LinearLayout>

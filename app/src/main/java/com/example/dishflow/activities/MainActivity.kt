@@ -9,6 +9,7 @@ import androidx.navigation.findNavController
 import androidx.navigation.ui.setupWithNavController
 import com.example.dishflow.R
 import com.example.dishflow.databinding.ActivityMainBinding
+import com.example.dishflow.fragments.NotificationBottomFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MainActivity : AppCompatActivity() {
@@ -25,6 +26,12 @@ class MainActivity : AppCompatActivity() {
             val navController = findNavController(R.id.fragmentContainerView)
             val bottomNav = binding.bottomNavigationView
             bottomNav.setupWithNavController(navController)
+
+
+        binding.bellIcon.setOnClickListener{
+            val bottomSheetFragment = NotificationBottomFragment()
+            bottomSheetFragment.show(supportFragmentManager, "test")
+        }
 
 
 

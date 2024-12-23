@@ -25,6 +25,7 @@
         android:layout_marginRight="5dp"/>
 
     <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/proceesBTN"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/edit_text_bg"

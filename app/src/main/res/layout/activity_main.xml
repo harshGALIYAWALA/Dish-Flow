@@ -13,7 +13,7 @@
 
 
     <LinearLayout
-    android:layout_width="wrap_content"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
     <TextView
@@ -26,14 +26,14 @@
         android:layout_marginTop="16dp"
         android:layout_marginLeft="16dp"/>
 
-    <ImageView
-        android:id="@+id/bellIcon"
-        android:layout_width="32dp"
-        android:layout_height="32dp"
-        android:src="@drawable/bell_01"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="16dp"
-        android:layout_marginLeft="100dp"/>
+
+        <ImageView
+            android:id="@+id/bellIcon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/bell_01"
+            android:layout_marginTop="16dp" />
+
 
     </LinearLayout>
 
