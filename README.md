@@ -36,7 +36,7 @@ Introducing our revolutionary Food Ordering App, designed to deliver a smooth, p
 
 - User Sign-Up (Completed)
 ![image](https://github.com/user-attachments/assets/5c4bde67-01f9-430a-a944-d8820ae948f2)
-- Food Listings (In Progress 🚧)
+- Food Listings [https://github.com/harshGALIYAWALA](https://github.com/harshGALIYAWALA)
 - Cart Management (In Progress 🚧)
 - Order Tracking (In Progress 🚧)
 - Admin Dashboard (In Progress 🚧)
