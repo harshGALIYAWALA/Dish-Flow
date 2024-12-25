@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.DetailsActivity"
+    android:orientation="vertical">
+    
+    <ImageView
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:src="@drawable/back_press_icon"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="16dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="food name"
+        android:textSize="24dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center_horizontal"
+        android:fontFamily="@font/metalmania_regular" />
+    
+    <ImageView
+        android:layout_width="300dp"
+        android:layout_height="200dp"
+        android:src="@drawable/menu_item_food02"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/circle_img_setup"
+        android:scaleType="centerCrop"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="31dp"
+        android:text="Short description"
+        android:textSize="24dp"
+        android:fontFamily="@font/metalmania_regular"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="31dp"
+        android:fontFamily="@font/lato_regular"
+        android:text="@string/description"
+        android:layout_marginRight="24dp"/>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="31dp"
+        android:text="  Ingredients"
+        android:textSize="24dp"
+        android:fontFamily="@font/metalmania_regular"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="31dp"
+        android:text="@string/description"
+        android:layout_marginRight="24dp"
+        android:fontFamily="@font/lato_regular"/>
+    
+    
+    
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="325dp"
+        android:layout_height="60dp"
+        android:background="@drawable/green_btn"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:text="Add To Cart"
+        android:textColor="@color/white"
+        android:textSize="16dp"
+        android:fontFamily="@font/lato_regular"/>
+
+</LinearLayout>
