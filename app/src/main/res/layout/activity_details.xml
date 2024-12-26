@@ -16,6 +16,7 @@
         android:layout_marginLeft="16dp" />
 
     <TextView
+        android:id="@+id/detailFoodName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="food name"
@@ -25,6 +26,7 @@
         android:fontFamily="@font/metalmania_regular" />
     
     <ImageView
+        android:id="@+id/detailFoodView"
         android:layout_width="300dp"
         android:layout_height="200dp"
         android:src="@drawable/menu_item_food02"
@@ -41,7 +43,9 @@
         android:text="Short description"
         android:textSize="24dp"
         android:fontFamily="@font/metalmania_regular"/>
+
     <TextView
+        android:id="@+id/descriptionTextview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
@@ -59,17 +63,18 @@
         android:text="  Ingredients"
         android:textSize="24dp"
         android:fontFamily="@font/metalmania_regular"/>
+
+
     <TextView
+        android:id="@+id/ingredientsTextview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
         android:layout_marginLeft="31dp"
-        android:text="@string/description"
+        android:layout_marginTop="16dp"
         android:layout_marginRight="24dp"
-        android:fontFamily="@font/lato_regular"/>
-    
-    
-    
+        android:fontFamily="@font/lato_regular"
+        android:text="@string/description" />
+
     <androidx.appcompat.widget.AppCompatButton
         android:layout_width="325dp"
         android:layout_height="60dp"
