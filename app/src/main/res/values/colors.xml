@@ -5,6 +5,7 @@
     <color name="offWhite">#E8E8E8</color>
     <color name="S_green">#1fc57a</color>
     <color name="little_dark_green">#AF04ED54</color>
+    <color name="dark_green">@android:color/holo_green_dark</color>
     <color name="E_green">#15BE77</color>
     <color name="offYellow">#E8F8AC</color>
 

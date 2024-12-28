@@ -26,6 +26,11 @@ class AdminMainActivity : AppCompatActivity() {
 
         // vibrating sound effects
         vibrationSound(binding.cardView1) // Pass the specific CardView
+        vibrationSound(binding.cardView2)
+        vibrationSound(binding.cardView3)
+        vibrationSound(binding.cardView4)
+        vibrationSound(binding.cardView5)
+        vibrationSound(binding.cardView6)
 
 
 
