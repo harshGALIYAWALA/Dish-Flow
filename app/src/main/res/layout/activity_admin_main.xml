@@ -1,148 +1,386 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activities_Admin.AdminMainActivity"
-    android:orientation="vertical">
-    
+    android:orientation="vertical"
+    tools:context=".activities_Admin.AdminMainActivity">
+
+    <!-- Header Section -->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:gravity="center_vertical">
 
         <ImageView
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:src="@drawable/logo"
-            android:layout_marginTop="16dp"
-            android:layout_marginLeft="16dp"
-            />
+            android:contentDescription="Logo" />
 
         <TextView
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Waves Of Food"
-            android:textSize="45dp"
+            android:textSize="32sp"
             android:fontFamily="@font/metalmania_regular"
-            android:layout_marginTop="11dp"
-            android:layout_marginLeft="17dp" />
-
+            android:layout_marginStart="16dp"
+            android:textColor="@android:color/black" />
     </LinearLayout>
 
+    <!-- Summary Card Section -->
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:elevation="15dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
-        app:cardCornerRadius="15dp"
+        android:layout_height="wrap_content"
+        android:elevation="8dp"
+        android:layout_margin="16dp"
+        app:cardCornerRadius="12dp"
         app:cardBackgroundColor="@color/offWhite">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="horizontal"
+            android:padding="16dp"
             android:weightSum="3">
 
-            <!-- First Equal Weighted Section -->
+            <!-- Pending Orders -->
             <LinearLayout
                 android:layout_width="0dp"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:orientation="vertical"
                 android:gravity="center">
 
                 <ImageView
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
-                    android:src="@drawable/admin_icon_pending_order" />
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/admin_icon_pending_order"
+                    android:contentDescription="Pending Orders" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Pending Order"
-                    android:textColor="@color/E_green"
-                    android:textSize="20sp"
+                    android:textSize="16sp"
                     android:fontFamily="@font/metalmania_regular"
-                    android:layout_marginTop="4dp"/>
+                    android:textColor="@color/E_green"
+                    android:layout_marginTop="4dp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="30"
-                    android:textSize="20sp"
-                    android:fontFamily="@font/metalmania_regular"
-                    android:layout_marginTop="2dp"/>
+                    android:textSize="18sp"
+                    android:fontFamily="@font/metalmania_regular" />
             </LinearLayout>
 
-            <!-- Second Equal Weighted Section -->
+            <!-- Completed Orders -->
             <LinearLayout
                 android:layout_width="0dp"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:orientation="vertical"
                 android:gravity="center">
 
                 <ImageView
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
-                    android:src="@drawable/admin_icon_complete_order" />
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/admin_icon_complete_order"
+                    android:contentDescription="Completed Orders" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Complete Order"
-                    android:textColor="@color/E_green"
-                    android:textSize="20sp"
+                    android:textSize="16sp"
                     android:fontFamily="@font/metalmania_regular"
-                    android:layout_marginTop="4dp"/>
+                    android:textColor="@color/E_green"
+                    android:layout_marginTop="4dp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="30"
-                    android:textSize="20sp"
-                    android:fontFamily="@font/metalmania_regular"
-                    android:layout_marginTop="2dp"/>
+                    android:textSize="18sp"
+                    android:fontFamily="@font/metalmania_regular" />
             </LinearLayout>
 
-            <!-- Third Equal Weighted Section -->
+            <!-- Compensation -->
             <LinearLayout
                 android:layout_width="0dp"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:orientation="vertical"
                 android:gravity="center">
 
                 <ImageView
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
-                    android:src="@drawable/admin_icon_earning_order" />
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/admin_icon_earning_order"
+                    android:contentDescription="Compensation" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Compensation"
-                    android:textColor="@color/E_green"
-                    android:textSize="20sp"
+                    android:textSize="16sp"
                     android:fontFamily="@font/metalmania_regular"
-                    android:layout_marginTop="4dp"/>
+                    android:textColor="@color/E_green"
+                    android:layout_marginTop="4dp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="30"
-                    android:textSize="20sp"
-                    android:fontFamily="@font/metalmania_regular"
-                    android:layout_marginTop="2dp"/>
+                    android:textSize="18sp"
+                    android:fontFamily="@font/metalmania_regular" />
             </LinearLayout>
-
-
         </LinearLayout>
-
     </androidx.cardview.widget.CardView>
+
+
+
+
+    <!-- Grid Menu Section -->
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="2"
+        android:padding="16dp">
+
+        <!--       #1-->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView_1"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_columnWeight="1"
+            android:layout_margin="8dp"
+            app:cardCornerRadius="12dp"
+            app:cardBackgroundColor="@color/offYellow"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?attr/selectableItemBackground">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@drawable/admin_icon_card_1"
+                    android:contentDescription="Add Menu" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Add Menu"
+                    android:textColor="@color/E_green"
+                    android:fontFamily="@font/metalmania_regular"
+                    android:textSize="16sp"
+                    android:layout_marginTop="8dp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+
+
+        <!--       #2-->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView_2"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_columnWeight="1"
+            android:layout_margin="8dp"
+            app:cardCornerRadius="12dp"
+            app:cardBackgroundColor="@color/offYellow">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@drawable/admin_icon_card_1"
+                    android:contentDescription="Add Menu" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Add Menu"
+                    android:textColor="@color/E_green"
+                    android:fontFamily="@font/metalmania_regular"
+                    android:textSize="16sp"
+                    android:layout_marginTop="8dp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+
+        <!--       #3-->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView_3"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_columnWeight="1"
+            android:layout_margin="8dp"
+            app:cardCornerRadius="12dp"
+            app:cardBackgroundColor="@color/offYellow"
+            android:layout_marginTop="30dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@drawable/admin_icon_card_1"
+                    android:contentDescription="Add Menu" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Add Menu"
+                    android:textColor="@color/E_green"
+                    android:fontFamily="@font/metalmania_regular"
+                    android:textSize="16sp"
+                    android:layout_marginTop="8dp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!--       #4-->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView_4"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_columnWeight="1"
+            android:layout_margin="8dp"
+            app:cardCornerRadius="12dp"
+            app:cardBackgroundColor="@color/offYellow"
+            android:layout_marginTop="30dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@drawable/admin_icon_card_1"
+                    android:contentDescription="Add Menu" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Add Menu"
+                    android:textColor="@color/E_green"
+                    android:fontFamily="@font/metalmania_regular"
+                    android:textSize="16sp"
+                    android:layout_marginTop="8dp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!--       #5-->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView_5"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_columnWeight="1"
+            android:layout_margin="8dp"
+            app:cardCornerRadius="12dp"
+            app:cardBackgroundColor="@color/offYellow"
+            android:layout_marginTop="30dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@drawable/admin_icon_card_1"
+                    android:contentDescription="Add Menu" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Add Menu"
+                    android:textColor="@color/E_green"
+                    android:fontFamily="@font/metalmania_regular"
+                    android:textSize="16sp"
+                    android:layout_marginTop="8dp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!--       #6-->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView_6"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_columnWeight="1"
+            android:layout_margin="8dp"
+            app:cardCornerRadius="12dp"
+            app:cardBackgroundColor="@color/offYellow"
+            android:layout_marginTop="30dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@drawable/admin_icon_card_1"
+                    android:contentDescription="Add Menu" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Add Menu"
+                    android:textColor="@color/E_green"
+                    android:fontFamily="@font/metalmania_regular"
+                    android:textSize="16sp"
+                    android:layout_marginTop="8dp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+    </GridLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Design By\nHarsh"
+            android:gravity="center"
+            android:textSize="19sp"
+            android:textColor="@color/S_green"
+            android:textStyle="bold"
+            android:fontFamily="@font/metalmania_regular"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </LinearLayout>

@@ -6,6 +6,8 @@
     <color name="S_green">#1fc57a</color>
     <color name="little_dark_green">#AF04ED54</color>
     <color name="E_green">#15BE77</color>
+    <color name="offYellow">#E8F8AC</color>
+
 
 
     <color name="green_primary">#4CAF50</color> <!-- Main Green -->
@@ -13,7 +15,7 @@
     <color name="green_secondary">#388E3C</color> <!-- Dark Green Secondary -->
     <color name="green_secondary_container">#C8E6C9</color> <!-- Light Green Secondary -->
     <color name="green_background">#E8F5E9</color> <!-- Very Light Green Background -->
-    <color name="green_surface">#F1F8E9</color> <!-- Light Surface Green -->
+    <color name="green_surface">#D2FDA0</color> <!-- Light Surface Green -->
 
 
 </resources>
