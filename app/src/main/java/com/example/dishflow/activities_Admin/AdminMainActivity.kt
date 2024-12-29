@@ -1,6 +1,7 @@
 package com.example.dishflow.activities_Admin
 
 import android.content.Context
+import android.content.Intent
 import android.os.Build
 import android.os.Bundle
 import android.os.VibrationEffect
@@ -12,6 +13,7 @@ import androidx.cardview.widget.CardView
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.dishflow.R
+import com.example.dishflow.activities.StartActivity
 import com.example.dishflow.databinding.ActivityAdminMainBinding
 
 class AdminMainActivity : AppCompatActivity() {
@@ -31,6 +33,12 @@ class AdminMainActivity : AppCompatActivity() {
         vibrationSound(binding.cardView4)
         vibrationSound(binding.cardView5)
         vibrationSound(binding.cardView6)
+
+
+        binding.cardView1.setOnClickListener{
+           intent = Intent(this, AdminAddItemActivity::class.java)
+            startActivity(intent)
+        }
 
 
 
