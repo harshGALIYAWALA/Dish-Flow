@@ -90,14 +90,15 @@
                     android:orientation="vertical">
 
                     <TextView
+                        android:id="@+id/selectImage"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:text="Item Image"
+                        android:drawableRight="@drawable/plus_icon"
+                        android:fontFamily="@font/metalmania_regular"
                         android:gravity="center_vertical"
                         android:paddingLeft="10dp"
-                        android:textSize="20sp"
-                        android:fontFamily="@font/metalmania_regular"
-                        android:drawableRight="@drawable/plus_icon" />
+                        android:text="Item Image"
+                        android:textSize="20sp" />
 
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -111,10 +112,12 @@
                 android:layout_marginTop="10dp">
 
                 <ImageView
+                    android:id="@+id/selectedImage"
                     android:layout_width="175dp"
                     android:layout_height="110dp"
                     android:layout_gravity="center_horizontal"
-                    android:src="@drawable/add_photo_icon"/>
+                    android:src="@drawable/add_photo_icon"
+                    android:scaleType="fitCenter"/>
 
             </androidx.cardview.widget.CardView>
 
