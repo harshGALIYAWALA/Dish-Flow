@@ -19,7 +19,6 @@
             android:layout_height="match_parent">
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/cartImage"
                 android:layout_width="64dp"
                 android:layout_height="64dp"
                 android:src="@drawable/menu_item_food02"
@@ -29,6 +28,7 @@
                 android:layout_marginLeft="10dp">
 
                 <ImageView
+                    android:id="@+id/AdminFoodImage"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:src="@drawable/menu_item_food02"
@@ -55,14 +55,6 @@
                     android:fontFamily="@font/metalmania_regular"
                     android:gravity="center_horizontal"/>
 
-                <TextView
-                    android:id="@+id/cartFoodName"
-                    android:layout_width="100dp"
-                    android:layout_height="wrap_content"
-                    android:text="Herbal Pancake"
-                    android:layout_gravity="center_vertical"
-                    android:layout_marginTop="2dp"
-                    android:gravity="center_horizontal"/>
 
 
                 <TextView
@@ -103,7 +95,7 @@
                         android:elevation="3dp"/>
 
                     <TextView
-                        android:id="@+id/cartItemQuantity"
+                        android:id="@+id/ItemQuantity"
                         android:layout_width="15dp"
                         android:layout_height="20dp"
                         android:layout_gravity="center_vertical"

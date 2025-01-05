@@ -34,10 +34,11 @@
 
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/MenuRecyclerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_margin="8dp"
-        tools:listitem="@layout/admin_item_item"/>
+        tools:listitem="@layout/admin_item_item" />
 
 
 </LinearLayout>
