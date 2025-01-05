@@ -12,16 +12,22 @@ import com.example.dishflow.R
 import com.example.dishflow.databinding.ActivityAdminAddItemBinding
 
 class AdminAddItemActivity : AppCompatActivity() {
-    private val binding: ActivityAdminAddItemBinding by lazy {
+    private val binding : ActivityAdminAddItemBinding by lazy {
         ActivityAdminAddItemBinding.inflate(layoutInflater)
     }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(binding.root)
-
+        // image selector
         binding.selectImage.setOnClickListener{
             pickImage.launch(PickVisualMediaRequest(ActivityResultContracts.PickVisualMedia.ImageOnly))
+        }
+
+
+        // backPress btn
+        binding.backBtn.setOnClickListener{
+            finish()
         }
 
 
