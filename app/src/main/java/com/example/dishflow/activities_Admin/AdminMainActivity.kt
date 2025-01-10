@@ -54,7 +54,7 @@ class AdminMainActivity : AppCompatActivity() {
         }
     }
 
-    private fun vibrationSound(cardView: CardView) {
+    public fun vibrationSound(cardView: CardView) {
         // Access the Vibrator service
         val vibrator = getSystemService(Context.VIBRATOR_SERVICE) as Vibrator
 
