@@ -15,6 +15,9 @@
         android:theme="@style/Base.Theme.DishFlow"
         tools:targetApi="31">
         <activity
+            android:name=".activities_Admin.AdminProfileActivity"
+            android:exported="false" />
+        <activity
             android:name=".activities_Admin.AdminSignUpActivity"
             android:exported="false" />
         <activity

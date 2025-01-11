@@ -46,6 +46,13 @@ class AdminMainActivity : AppCompatActivity() {
         }
 
 
+        binding.cardView3.setOnClickListener{
+            intent = Intent(this, AdminProfileActivity::class.java)
+            startActivity(intent)
+        }
+
+
+
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())

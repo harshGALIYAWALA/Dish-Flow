@@ -31,7 +31,7 @@ class selectRoleActivity : AppCompatActivity() {
 
         binding.selectAdmin.setOnClickListener{
             intent = Intent(this, AdminLogInActivity::class.java)
-//            startActivity(intent)
+            startActivity(intent)
             VibrationUtils.vibrationSound(this, binding.selectAdmin)
         }
 

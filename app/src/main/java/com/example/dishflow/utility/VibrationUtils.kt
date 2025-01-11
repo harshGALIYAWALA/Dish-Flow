@@ -20,7 +20,6 @@ object VibrationUtils {
                 @Suppress("DEPRECATION")
                 vibrator.vibrate(50) // Deprecated in API 26+
             }
-            Toast.makeText(context, "Card Clicked!", Toast.LENGTH_SHORT).show()
         }
     }
 }
