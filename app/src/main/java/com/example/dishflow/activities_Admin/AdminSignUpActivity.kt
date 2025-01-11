@@ -1,27 +1,29 @@
-package com.example.dishflow.activities
+package com.example.dishflow.activities_Admin
 
 import android.content.Intent
 import android.os.Bundle
-import android.os.Handler
-import android.os.Looper
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.dishflow.R
+import com.example.dishflow.databinding.ActivityAdminSignUpBinding
 
+class AdminSignUpActivity : AppCompatActivity() {
 
-class Splash_Screen : AppCompatActivity() {
+    private val binding : ActivityAdminSignUpBinding by lazy {
+        ActivityAdminSignUpBinding.inflate(layoutInflater)
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_splash_screen)
+        setContentView(binding.root)
 
-        Handler(Looper.getMainLooper()).postDelayed({
-            val intent = Intent(this, selectRoleActivity::class.java)
+        binding.adminRidirectToLogin.setOnClickListener{
+            intent = Intent(this, AdminLogInActivity::class.java)
             startActivity(intent)
-            finish()
-        }, 3000)
+        }
 
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->

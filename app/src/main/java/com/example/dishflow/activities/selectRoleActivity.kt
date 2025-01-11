@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.dishflow.R
+import com.example.dishflow.activities_Admin.AdminLogInActivity
 import com.example.dishflow.databinding.ActivitySelectRoleBinding
 import com.example.dishflow.utility.VibrationUtils
 
@@ -26,6 +27,12 @@ class selectRoleActivity : AppCompatActivity() {
            intent = Intent(this, SignUpActivity::class.java)
             startActivity(intent)
             VibrationUtils.vibrationSound(this, binding.selectUser)
+        }
+
+        binding.selectAdmin.setOnClickListener{
+            intent = Intent(this, AdminLogInActivity::class.java)
+//            startActivity(intent)
+            VibrationUtils.vibrationSound(this, binding.selectAdmin)
         }
 
 

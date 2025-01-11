@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities_Admin.AdminLogInActivity"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="91dp"
+        android:layout_height="92dp"
+        android:layout_gravity="center"
+        android:src="@drawable/logo"
+        android:layout_marginTop="50dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dish Flow"
+        android:layout_gravity="center"
+        android:layout_marginTop="8dp"
+        android:textSize="32sp"
+        android:fontFamily="@font/metalmania_regular"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Login To Your\nAdmin Dashboard"
+        android:textAlignment="center"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:textSize="23sp"
+        android:textColor="@color/E_green"
+        android:fontFamily="@font/metalmania_regular"
+        android:textStyle="bold"/>
+
+    <EditText
+        android:layout_width="325dp"
+        android:layout_height="57dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/edit_text_bg"
+        android:hint="Email or Phone Number"
+        android:fontFamily="@font/lato_regular"
+        android:inputType="textEmailAddress"
+        android:elevation="5dp"
+        android:padding="9dp" />
+
+    <EditText
+        android:layout_width="325dp"
+        android:layout_height="57dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"
+        android:inputType="textPassword"
+        android:padding="9dp"
+        android:background="@drawable/edit_text_bg"
+        android:fontFamily="@font/lato_regular"
+        android:elevation="5dp"
+        android:hint="Password"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/metalmania_regular"
+        android:text="Or" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="continue With"
+        android:textColor="@color/E_green"
+        android:fontFamily="@font/metalmania_regular"
+        android:textSize="27sp"
+        android:layout_marginTop="8dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:layout_marginTop="16dp">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/admin_facebook_btn"
+            android:layout_width="150dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:elevation="22dp"
+            app:cardCornerRadius="15dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="2dp">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/facebook_logo"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="20dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Facebook"
+                    android:fontFamily="@font/lato_regular"
+                    android:layout_gravity="center_vertical"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="5dp"/>
+
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/admin_google_btn"
+            android:layout_width="150dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:elevation="22dp"
+            app:cardCornerRadius="15dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="2dp">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/google_logo"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="20dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="5dp"
+                    android:fontFamily="@font/lato_regular"
+                    android:text="Google"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/admin_next_btn"
+        android:layout_width="150dp"
+        android:layout_height="57dp"
+        android:text="Login"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        android:fontFamily="@font/metalmania_regular"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/green_btn"/>
+
+    <TextView
+        android:id="@+id/admin_ridirect_to_signUp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Don’t Have Account?"
+        android:layout_gravity="center"
+        android:textColor="@color/E_green"
+        android:fontFamily="@font/lato_regular"
+        android:layout_marginTop="10dp"/>
+
+</LinearLayout>
