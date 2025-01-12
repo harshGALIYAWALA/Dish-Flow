@@ -13,6 +13,7 @@ import androidx.cardview.widget.CardView
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.dishflow.R
+import com.example.dishflow.adaptar.AdminDeliveryAdapter
 import com.example.dishflow.databinding.ActivityAdminMainBinding
 
 class AdminMainActivity : AppCompatActivity() {
@@ -48,6 +49,12 @@ class AdminMainActivity : AppCompatActivity() {
 
         binding.cardView3.setOnClickListener{
             intent = Intent(this, AdminProfileActivity::class.java)
+            startActivity(intent)
+        }
+
+
+        binding.cardView5.setOnClickListener{
+            intent = Intent(this, OutForDeliveryActivity::class.java)
             startActivity(intent)
         }
 
