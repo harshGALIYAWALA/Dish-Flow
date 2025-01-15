@@ -7,6 +7,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".activities_Admin.AdminProfileActivity"
+    android:background="@color/white"
     android:orientation="vertical">
 
 
@@ -189,8 +190,8 @@
                 android:layout_height="match_parent"
                 android:layout_marginLeft="8dp"
                 android:background="@drawable/profile_edit_text"
-                android:inputType="phone"
-                android:hint="830829323..."/>
+                android:inputType="textPassword"
+                android:text="9106333100"/>
         </LinearLayout>
 
     </androidx.cardview.widget.CardView>

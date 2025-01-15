@@ -36,25 +36,30 @@ class AdminMainActivity : AppCompatActivity() {
 
 
         binding.cardView1.setOnClickListener{
-           intent = Intent(this, AdminAddItemActivity::class.java)
+           val intent = Intent(this, AdminAddItemActivity::class.java)
             startActivity(intent)
         }
 
 
         binding.cardView2.setOnClickListener{
-            intent = Intent(this, AdminAllItemActivity::class.java)
+            val intent = Intent(this, AdminAllItemActivity::class.java)
             startActivity(intent)
         }
 
 
         binding.cardView3.setOnClickListener{
-            intent = Intent(this, AdminProfileActivity::class.java)
+            val intent = Intent(this, AdminProfileActivity::class.java)
             startActivity(intent)
         }
 
 
         binding.cardView5.setOnClickListener{
-            intent = Intent(this, OutForDeliveryActivity::class.java)
+            val intent = Intent(this, OutForDeliveryActivity::class.java)
+            startActivity(intent)
+        }
+
+        binding.pendingOrder.setOnClickListener{
+            val intent = Intent(this, AdminPendingOrderActivity::class.java)
             startActivity(intent)
         }
 

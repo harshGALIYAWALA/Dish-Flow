@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="105dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="87dp"
+        app:cardCornerRadius="22dp"
+        android:layout_gravity="center_horizontal"
+        android:elevation="10dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/pendingOderImage"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:src="@drawable/google_logo"
+                android:layout_gravity="center_vertical"
+                android:scaleType="centerCrop"
+                android:layout_marginLeft="10dp"/>
+
+            <LinearLayout
+                android:layout_width="160dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_marginLeft="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Name: "
+                        android:textSize="20dp"
+                        android:fontFamily="@font/lato_regular"
+                        android:textStyle="bold"/>
+                    <TextView
+                        android:id="@+id/CustomerName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Harsh"
+                        android:textSize="23dp"
+                        android:fontFamily="@font/metalmania_regular"
+                        android:textColor="@color/E_green"
+                        android:layout_marginLeft="5dp"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Quantity:"
+                        android:textSize="20dp"
+                        android:fontFamily="@font/lato_regular"
+                        android:textStyle="bold"/>
+                    <TextView
+                        android:id="@+id/quantity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="5"
+                        android:textSize="23dp"
+                        android:fontFamily="@font/metalmania_regular"
+                        android:layout_marginLeft="5dp"
+                        android:textColor="@color/E_green"/>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/addToCardPopular"
+                    android:layout_width="100dp"
+                    android:layout_height="35dp"
+                    android:gravity="center"
+                    android:text="Accept"
+                    android:textSize="10dp"
+                    android:textColor="@color/white"
+                    android:background="@drawable/green_btn"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>
