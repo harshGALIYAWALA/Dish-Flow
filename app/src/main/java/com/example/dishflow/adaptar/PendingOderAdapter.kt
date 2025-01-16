@@ -23,11 +23,13 @@ class PendingOderAdapter(private val PendingOderItems:ArrayList<String>,
     override fun getItemCount(): Int = PendingOderItems.size
 
     inner class PendingOderViewHolder(private val binding: PendingOrderItemBinding): RecyclerView.ViewHolder(binding.root){
+        private val isAccepted = false
         fun bind(position: Int) {
             binding.apply {
                 CustomerName.text = PendingOderItems[position]
                 quantity.text = Quantites[position]
                 pendingOderImage.setImageResource(PendingOderItemImage[position])
+                
             }
         }
 
