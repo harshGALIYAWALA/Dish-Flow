@@ -38,18 +38,20 @@
         android:textStyle="bold"/>
 
     <EditText
+        android:id="@+id/email"
         android:layout_width="325dp"
         android:layout_height="57dp"
         android:layout_gravity="center"
         android:layout_marginTop="16dp"
         android:background="@drawable/edit_text_bg"
-        android:hint="Email or Phone Number"
+        android:hint="Email"
         android:fontFamily="@font/lato_regular"
         android:inputType="textEmailAddress"
         android:elevation="5dp"
         android:padding="9dp" />
 
     <EditText
+        android:id="@+id/password"
         android:layout_width="325dp"
         android:layout_height="57dp"
         android:layout_gravity="center"

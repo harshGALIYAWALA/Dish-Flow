@@ -111,6 +111,7 @@ class AdminSignUpActivity : AppCompatActivity() {
         }
     }
 
+    // create user in firebase
     private fun createUser(email: String, password: String) {
         auth.createUserWithEmailAndPassword(email, password).addOnCompleteListener{ task ->
             if(task.isSuccessful){
@@ -125,6 +126,7 @@ class AdminSignUpActivity : AppCompatActivity() {
         }
     }
 
+    // user data saved in real time DataBase
     private fun saveUserData() {
         username = binding.name.text.toString().trim()
         nameOfRestaurant = binding.restaurantName.text.toString().trim()
