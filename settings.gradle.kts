@@ -17,8 +17,11 @@ dependencyResolutionManagement {
         google()
         mavenCentral()
         maven ( "https://jitpack.io" )
+
+
     }
 }
+
 
 rootProject.name = "Dish Flow"
 include(":app")

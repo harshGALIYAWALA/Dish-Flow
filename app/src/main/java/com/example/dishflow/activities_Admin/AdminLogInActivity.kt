@@ -23,6 +23,7 @@ class AdminLogInActivity : AppCompatActivity() {
     private lateinit var database: DatabaseReference
 
 
+
     private val binding : ActivityAdminLogInBinding by lazy {
         ActivityAdminLogInBinding.inflate(layoutInflater)
     }
@@ -61,13 +62,15 @@ class AdminLogInActivity : AppCompatActivity() {
             insets
         }
     }
-    
+
+    // create user in firebase
     private fun createUserAccount(email: String, password: String) {
         auth.signInWithEmailAndPassword(email, password).addOnCompleteListener{ task ->
             if(task.isSuccessful) {
                 val user = auth.currentUser
-                updateUI(user)
+                startActivity(Intent(this, AdminMainActivity::class.java))
                 Log.d("Account", "createUser: Success", task.exception)
+                finish() 
             } else {
                 Toast.makeText(this, "please first create account", Toast.LENGTH_LONG).show()
                 Log.d("Account", "createUser: Failure", task.exception)
@@ -75,8 +78,4 @@ class AdminLogInActivity : AppCompatActivity() {
         }
     }
 
-    private fun updateUI(user: FirebaseUser?) {
-        startActivity(Intent(this, AdminMainActivity::class.java))
-        finish()
-    }
 }

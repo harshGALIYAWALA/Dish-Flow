@@ -2,6 +2,7 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.google.gms.google.services)
+
 }
 
 android {
@@ -57,5 +58,9 @@ dependencies {
     androidTestImplementation(libs.androidx.espresso.core)
 
     implementation ("com.github.denzcoskun:ImageSlideshow:0.1.2")
+
+    implementation ("com.google.firebase:firebase-auth:23.1.0")
+
+
 
 }
