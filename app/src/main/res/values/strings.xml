@@ -4,4 +4,8 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad</string>
+
+
+    <string name="default_web_client_id" translatable="false">542898729929-qnaquovrro5clmqbu15b9ejs4koblgcu.apps.googleusercontent.com</string>
+
 </resources>

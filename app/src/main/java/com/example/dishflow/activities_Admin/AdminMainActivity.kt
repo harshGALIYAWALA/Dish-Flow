@@ -15,6 +15,7 @@ import androidx.core.view.WindowInsetsCompat
 import com.example.dishflow.R
 import com.example.dishflow.adaptar.AdminDeliveryAdapter
 import com.example.dishflow.databinding.ActivityAdminMainBinding
+import com.google.firebase.auth.FirebaseAuth
 
 class AdminMainActivity : AppCompatActivity() {
 
@@ -61,6 +62,18 @@ class AdminMainActivity : AppCompatActivity() {
         binding.pendingOrder.setOnClickListener{
             val intent = Intent(this, AdminPendingOrderActivity::class.java)
             startActivity(intent)
+        }
+
+        binding.cardView6.setOnClickListener{
+            // Sign out from Firebase Authentication
+            FirebaseAuth.getInstance().signOut()
+
+            Toast.makeText(this, "You Have Log Out", Toast.LENGTH_SHORT).show()
+
+            // Redirect to the login screen
+            val intent = Intent(this, AdminLogInActivity::class.java)
+            startActivity(intent)
+            finish() // Optionally finish the current activity so the user can't navigate back
         }
 
 

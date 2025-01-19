@@ -1,9 +1,9 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
-    alias(libs.plugins.google.gms.google.services)
-
+    alias(libs.plugins.google.gms.google.services) // This will apply the Google services plugin
 }
+
 
 android {
     namespace = "com.example.dishflow"
@@ -42,7 +42,6 @@ android {
 }
 
 dependencies {
-
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
@@ -58,9 +57,14 @@ dependencies {
     androidTestImplementation(libs.androidx.espresso.core)
 
     implementation ("com.github.denzcoskun:ImageSlideshow:0.1.2")
-
     implementation ("com.google.firebase:firebase-auth:23.1.0")
 
 
+    implementation ("com.google.android.gms:play-services-auth:20.7.0") // Google Sign-In dependency
 
+
+}
+
+apply  {
+    plugin("com.google.gms.google-services")
 }
