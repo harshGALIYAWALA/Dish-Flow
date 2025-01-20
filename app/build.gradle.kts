@@ -52,6 +52,7 @@ dependencies {
     implementation(libs.play.services.maps)
     implementation(libs.firebase.auth)
     implementation(libs.firebase.database)
+    implementation(libs.firebase.storage)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
@@ -63,8 +64,16 @@ dependencies {
     implementation ("com.google.android.gms:play-services-auth:20.7.0") // Google Sign-In dependency
 
 
+//    implementation(platform("io.github.jan-tennert.supabase:bom:3.0.0"))
+//    implementation("io.github.jan-tennert.supabase:postgrest-kt")
+
+
+
+
 }
 
 apply  {
     plugin("com.google.gms.google-services")
+
+
 }

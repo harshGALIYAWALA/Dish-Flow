@@ -40,6 +40,7 @@
 
 
             <EditText
+                android:id="@+id/foodName"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:hint="Item Name"
@@ -56,6 +57,7 @@
                 android:textColorHint="@color/black"/>
 
             <EditText
+                android:id="@+id/foodPrice"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:hint="Item Price"
@@ -91,7 +93,6 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/selectImage"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:drawableRight="@drawable/plus_icon"
@@ -139,6 +140,7 @@
                 android:textColorHint="@color/black"/>
 
             <EditText
+                android:id="@+id/description"
                 android:layout_width="200dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
@@ -166,6 +168,7 @@
                 android:textColorHint="@color/black"/>
 
             <EditText
+                android:id="@+id/ingredients"
                 android:layout_width="200dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
@@ -177,6 +180,7 @@
                 android:paddingLeft="5dp"/>
             
             <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/addItemButton"
                 android:layout_width="160dp"
                 android:layout_height="60dp"
                 android:background="@drawable/green_btn"

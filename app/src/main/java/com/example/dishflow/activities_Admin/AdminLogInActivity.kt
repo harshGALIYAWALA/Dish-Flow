@@ -6,19 +6,17 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
-import androidx.activity.result.contract.ActivityResultContract
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
-import androidx.appcompat.widget.ActivityChooserView
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.dishflow.R
 import com.example.dishflow.databinding.ActivityAdminLogInBinding
+import com.example.dishflow.utility.VibrationUtils_card
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
@@ -62,6 +60,7 @@ class AdminLogInActivity : AppCompatActivity() {
         // Handle Google Sign-In button click
         binding.adminGoogleBtn.setOnClickListener{
             val signIntent = googleSignInClient.signInIntent
+            VibrationUtils_card.vibrationSound(this, binding.adminGoogleBtn)
             launcher.launch(signIntent)
         }
 
