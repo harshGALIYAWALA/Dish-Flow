@@ -73,41 +73,21 @@
                 android:elevation="10dp"
                 android:textColorHint="@color/black"/>
 
-            <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:hint="Short Description"
+            <Button
+                android:id="@+id/pickImageadmin"
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
                 android:fontFamily="@font/metalmania_regular"
-                android:layout_marginTop="16dp"
-                android:layout_marginLeft="8dp"
-                android:layout_marginRight="8dp"
-                app:cardBackgroundColor="@color/white"
-                app:cardCornerRadius="15dp"
+                android:layout_gravity="center_horizontal"
+                android:paddingLeft="10dp"
+                android:text="Item Image"
                 android:textSize="20sp"
-                android:elevation="10dp"
-                android:paddingLeft="10dp">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:drawableRight="@drawable/plus_icon"
-                        android:fontFamily="@font/metalmania_regular"
-                        android:gravity="center_vertical"
-                        android:paddingLeft="10dp"
-                        android:text="Item Image"
-                        android:textSize="20sp" />
-
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
+                android:layout_marginTop="10dp"/>
 
             <androidx.cardview.widget.CardView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+
+                android:layout_width="175dp"
+                android:layout_height="120dp"
                 android:elevation="10dp"
                 app:cardCornerRadius="15dp"
                 android:layout_gravity="center_horizontal"
@@ -115,8 +95,8 @@
 
                 <ImageView
                     android:id="@+id/selectedImage"
-                    android:layout_width="175dp"
-                    android:layout_height="110dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
                     android:layout_gravity="center_horizontal"
                     android:src="@drawable/add_photo_icon"
                     android:scaleType="fitCenter"/>

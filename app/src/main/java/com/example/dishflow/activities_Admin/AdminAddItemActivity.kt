@@ -1,18 +1,23 @@
 package com.example.dishflow.activities_Admin
 
+
 import android.net.Uri
 import android.os.Bundle
+import android.util.Log
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
+import androidx.activity.result.PickVisualMediaRequest
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.dishflow.R
 import com.example.dishflow.databinding.ActivityAdminAddItemBinding
-import com.google.android.gms.auth.api.signin.internal.Storage
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.FirebaseDatabase
+
+
+
 
 
 class AdminAddItemActivity : AppCompatActivity() {
@@ -25,6 +30,7 @@ class AdminAddItemActivity : AppCompatActivity() {
     private lateinit var foodIngredients : String
     private lateinit var auth: FirebaseAuth
     private lateinit var database: FirebaseDatabase
+
 
 
     private val binding : ActivityAdminAddItemBinding by lazy {
@@ -40,6 +46,12 @@ class AdminAddItemActivity : AppCompatActivity() {
         database = FirebaseDatabase.getInstance()
 
 
+
+        binding.pickImageadmin.setOnClickListener{
+            pickImage.launch(PickVisualMediaRequest(ActivityResultContracts.PickVisualMedia.ImageOnly))
+            Log.d("imagePick", "onCreate:")
+        }
+
         // add item button
         binding.addItemButton.setOnClickListener{
             // get data from details
@@ -47,9 +59,12 @@ class AdminAddItemActivity : AppCompatActivity() {
             foodPrice = binding.foodPrice.text.toString().trim()
             foodDescription = binding.description.text.toString().trim()
             foodIngredients = binding.ingredients.text.toString().trim()
-            binding.selectedImage.setOnClickListener{
-                pickImage.launch("image/*")
+
+            binding.pickImageadmin.setOnClickListener{
+                pickImage.launch(PickVisualMediaRequest(ActivityResultContracts.PickVisualMedia.ImageOnly))
+                Log.d("imagePick", "onCreate:")
             }
+
 
             // validation of all field
             if ( !(foodName.isBlank() || foodPrice.isBlank() || foodDescription.isBlank() || foodIngredients.isBlank()) ){
@@ -59,6 +74,9 @@ class AdminAddItemActivity : AppCompatActivity() {
             } else {
                 Toast.makeText(this, "fill all the item", Toast.LENGTH_SHORT).show()
             }
+
+
+
         }
 
         // backPress btn
@@ -75,20 +93,19 @@ class AdminAddItemActivity : AppCompatActivity() {
     }
 
     private fun uploadData() {
-        val menuRef = database.getReference("menu")
-        val newItemId = Storage
+
 
 
     }
 
     // image selector from photo
-    private val pickImage =
-        registerForActivityResult(ActivityResultContracts.GetContent()) { uri ->
-            if(uri != null) {
-                binding.selectedImage.setImageURI(uri)
-            }
+   val pickImage = registerForActivityResult(ActivityResultContracts.PickVisualMedia()) {uri ->
+       if(uri != null) {
+           binding.selectedImage.setImageURI(uri)
+       }
 
-        }
+
+    }
 
 
 }
