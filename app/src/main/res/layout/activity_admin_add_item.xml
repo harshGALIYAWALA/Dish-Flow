@@ -73,35 +73,22 @@
                 android:elevation="10dp"
                 android:textColorHint="@color/black"/>
 
-            <Button
-                android:id="@+id/pickImageadmin"
-                android:layout_width="200dp"
-                android:layout_height="match_parent"
+            <EditText
+                android:id="@+id/foodImage"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:hint="paste url here.."
                 android:fontFamily="@font/metalmania_regular"
-                android:layout_gravity="center_horizontal"
-                android:paddingLeft="10dp"
-                android:text="Item Image"
+                android:layout_marginTop="16dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
                 android:textSize="20sp"
-                android:layout_marginTop="10dp"/>
-
-            <androidx.cardview.widget.CardView
-
-                android:layout_width="175dp"
-                android:layout_height="120dp"
+                android:background="@drawable/edit_text_bg"
+                android:paddingLeft="10dp"
+                android:inputType="textUri"
+                android:maxEms="4"
                 android:elevation="10dp"
-                app:cardCornerRadius="15dp"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="10dp">
-
-                <ImageView
-                    android:id="@+id/selectedImage"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center_horizontal"
-                    android:src="@drawable/add_photo_icon"
-                    android:scaleType="fitCenter"/>
-
-            </androidx.cardview.widget.CardView>
+                android:textColorHint="@color/black"/>
 
             <EditText
                 android:layout_width="match_parent"
