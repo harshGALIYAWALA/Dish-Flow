@@ -22,6 +22,8 @@ import com.google.firebase.database.FirebaseDatabase
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
 import com.google.firebase.auth.GoogleAuthProvider
 
+
+
 class AdminLogInActivity : AppCompatActivity() {
 
     private lateinit var email:String
@@ -29,7 +31,6 @@ class AdminLogInActivity : AppCompatActivity() {
     private lateinit var auth: FirebaseAuth
     private lateinit var database: DatabaseReference
     private lateinit var googleSignInClient : GoogleSignInClient
-
 
 
     private val binding : ActivityAdminLogInBinding by lazy {
@@ -40,6 +41,7 @@ class AdminLogInActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(binding.root)
+
 
         // initialize FirebaseAuth and FirebaseDatabase
         auth = FirebaseAuth.getInstance()

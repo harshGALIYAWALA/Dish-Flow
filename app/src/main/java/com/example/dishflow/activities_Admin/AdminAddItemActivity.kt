@@ -81,34 +81,46 @@ class AdminAddItemActivity : AppCompatActivity() {
     }
 
     private fun uploadData() {
+        // Get the current user's unique ID (UID) from Firebase Authentication
         val currentUserId = FirebaseAuth.getInstance().currentUser?.uid
 
+        // Check if the user is authenticated
         if (currentUserId != null) {
-            val menuRef = database.reference.child("menu").child(currentUserId) // Menu branch specific to the user
-            val newItemKey = menuRef.push().key // Generate a unique key for the new item
+            // Reference the "menu" node in the Firebase Realtime Database
+            val menuRef = database.reference.child("menu") // Menu branch in the database
+            // Generate a unique key for the new item
+            val newItemKey = menuRef.push().key
 
+            // Check if a unique key was successfully generated
             if (newItemKey != null) {
-                // Create a FoodItemModel
+                // Create a FoodItemModel object with the food details
                 val foodItem = AllMenu(foodName, foodPrice, foodDescription, foodImageUri, foodIngredients)
 
-                // Save the new food item under the generated key
-                menuRef.setValue(foodItem)
+                // Save the new food item under the generated unique key
+                menuRef.child(newItemKey).setValue(foodItem)
                     .addOnCompleteListener { task ->
                         if (task.isSuccessful) {
+                            // Log success if the item was added successfull
+                            Toast.makeText(this, "item added Successfully", Toast.LENGTH_SHORT).show()
                             Log.d("Menu", "uploadData: Item added successfully")
                         } else {
+                            // Log an error if the item could not be added
+                            Toast.makeText(this, "item added failure", Toast.LENGTH_SHORT).show()
                             Log.e("Menu", "uploadData: Failed to add item", task.exception)
                         }
                     }
             } else {
+                // Log an error if the unique key could not be generated
+                Toast.makeText(this, "unique key could not be generated", Toast.LENGTH_SHORT).show()
                 Log.e("Menu", "uploadData: Failed to generate a new key")
             }
         } else {
+            // Log an error and show a message if the user is not authenticated
             Log.e("Menu", "uploadData: User not authenticated")
             Toast.makeText(this, "User not authenticated. Please log in.", Toast.LENGTH_SHORT).show()
         }
-
     }
+
 
     // image selector from photo
 //    val pickImage = registerForActivityResult(ActivityResultContracts.PickVisualMedia()) {uri ->

@@ -1,38 +1,49 @@
 package com.example.dishflow.adaptar
 
+import android.content.Context
+import android.net.Uri
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.example.dishflow.databinding.AdminItemItemBinding
+import com.example.dishflow.models.AllMenu
+import com.google.firebase.database.DatabaseReference
 
-class AllItemAdapter_Admin(private val MenuItemNameAdmin:ArrayList<String>,
-                           private val MenuItemPriceAdmin:ArrayList<String>,
-                           private val MenuItemImageAdmin:ArrayList<Int>): RecyclerView.Adapter<AllItemAdapter_Admin.AllItemViewHolder>() {
+class MenuItemAdapter_Admin(
+    private val context: Context,
+    private val menuList: ArrayList<AllMenu>,
+    databaseRefrence: DatabaseReference
+): RecyclerView.Adapter<MenuItemAdapter_Admin.AllItemViewHolder>() {
 
-    private val itemQuantities = IntArray(MenuItemNameAdmin.size){1}
+    private val itemQuantities = IntArray(menuList.size){1}
 
     override fun onCreateViewHolder(
         parent: ViewGroup,
          viewType: Int
-    ): AllItemAdapter_Admin.AllItemViewHolder {
+    ): MenuItemAdapter_Admin.AllItemViewHolder {
         val binding = AdminItemItemBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return AllItemViewHolder(binding)
     }
 
-    override fun onBindViewHolder(holder: AllItemAdapter_Admin.AllItemViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: MenuItemAdapter_Admin.AllItemViewHolder, position: Int) {
         holder.bind(position)
     }
 
-    override fun getItemCount(): Int = MenuItemNameAdmin.size
+    override fun getItemCount(): Int = menuList.size
 
 
     inner class AllItemViewHolder(private val binding: AdminItemItemBinding): RecyclerView.ViewHolder(binding.root){
         fun bind(position: Int) {
             binding.apply {
                 val quantity = itemQuantities[position]
-                AdminFoodName.text = MenuItemNameAdmin[position]
-                AdminItemPrice.text = MenuItemPriceAdmin[position]
-                AdminFoodImage.setImageResource(MenuItemImageAdmin[position])
+                val menuItem = menuList[position]
+                val uriString = menuItem.foodImage
+                val uri = Uri.parse(uriString)
+                AdminFoodName.text = menuItem.foodName
+                AdminItemPrice.text = menuItem.foodPrice
+                Glide.with(context).load(uri).into(AdminFoodImage)
+
 
 
 
@@ -70,11 +81,11 @@ class AllItemAdapter_Admin(private val MenuItemNameAdmin:ArrayList<String>,
             }
         }
         private fun deleteItem(position: Int){
-            MenuItemNameAdmin.removeAt(position)
-            MenuItemImageAdmin.removeAt(position)
-            MenuItemPriceAdmin.removeAt(position)
+            menuList.removeAt(position)
+            menuList.removeAt(position)
+            menuList.removeAt(position)
             notifyItemRemoved(position)
-            notifyItemRangeChanged(position, MenuItemNameAdmin.size)
+            notifyItemRangeChanged(position, menuList.size)
         }
 
     }
