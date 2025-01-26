@@ -8,15 +8,12 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.dishflow.activities.DetailsActivity
 import com.example.dishflow.databinding.MenuItemBinding
+import com.example.dishflow.models.MenuItemUser
 
 
-class MenuAdapter(private val menuItemName: MutableList<String>,
-                  private val menuItemPrice: MutableList<String>,
-                  private val menuItemImage: MutableList<Int>,
+class MenuAdapter(private val menuItems: List<MenuItemUser>,
                   private val requireContext: Context) : RecyclerView.Adapter<MenuAdapter.MenuViewHolder>()  {
-
-
-    private val itemclickListener: OnClickListener ?= null
+                      
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MenuViewHolder {
         val binding = MenuItemBinding.inflate(LayoutInflater.from(parent.context), parent, false)
@@ -29,7 +26,7 @@ class MenuAdapter(private val menuItemName: MutableList<String>,
     }
 
 
-    override fun getItemCount(): Int = menuItemName.size
+    override fun getItemCount(): Int = menuItems.size
 
 
     inner class MenuViewHolder(private val binding: MenuItemBinding): RecyclerView.ViewHolder(binding.root){
@@ -38,7 +35,7 @@ class MenuAdapter(private val menuItemName: MutableList<String>,
             binding.root.setOnClickListener{
                 val position = adapterPosition
                 if (position != RecyclerView.NO_POSITION) {
-                    itemclickListener.onItemClick(position)
+                    (position)
                 }
                 // SET ON CLICK LISTEN TO OPEN DETAILS
                 val intent = Intent(requireContext, DetailsActivity::class.java)
