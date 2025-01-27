@@ -46,7 +46,7 @@ class SearchFragment : Fragment() {
         binding = FragmentSearchBinding.inflate(inflater, container, false)
 
         // Initialize the adapter with the filtered lists (currently empty)
-        adapter = MenuAdapter(filteredMenuFoodName, filteredMenuFoodPrice, filteredMenuFoodImage, requireContext())
+//        adapter = MenuAdapter(filteredMenuFoodName, filteredMenuFoodPrice, filteredMenuFoodImage, requireContext())
         // Set a LinearLayoutManager to display items in a vertical list
         binding.menuRecyclerView.layoutManager = LinearLayoutManager(requireContext())
         // Attach the adapter to the RecyclerView
