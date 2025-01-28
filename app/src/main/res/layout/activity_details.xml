@@ -27,7 +27,7 @@
         android:fontFamily="@font/metalmania_regular" />
     
     <ImageView
-        android:id="@+id/detailFoodView"
+        android:id="@+id/detailFoodImage"
         android:layout_width="300dp"
         android:layout_height="200dp"
         android:src="@drawable/menu_item_food02"
@@ -46,7 +46,7 @@
         android:fontFamily="@font/metalmania_regular"/>
 
     <TextView
-        android:id="@+id/descriptionTextview"
+        android:id="@+id/detailFoodDescription"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
@@ -67,7 +67,7 @@
 
 
     <TextView
-        android:id="@+id/ingredientsTextview"
+        android:id="@+id/detailFoodIngredients"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="31dp"

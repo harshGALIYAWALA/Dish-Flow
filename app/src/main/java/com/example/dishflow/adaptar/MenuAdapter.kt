@@ -49,7 +49,7 @@ class MenuAdapter(private val menuItems: List<MenuItemUser>,
                 putExtra("MenuItemName", menuItem.foodName)
                 putExtra("MenuItemImage", menuItem.foodImage)
                 putExtra("MenuItemDescription", menuItem.foodDescription)
-                putExtra("MenuItemIntredient", menuItem.foodIntredient)
+                putExtra("MenuItemIntredient", menuItem.foodIngredients)
                 putExtra("MenuItemPrice", menuItem.foodPrice)
             }
             requireContext.startActivity(intent)
