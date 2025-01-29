@@ -62,7 +62,7 @@ class AdminAddItemActivity : AppCompatActivity() {
             if(foodName.isNotEmpty() || foodPrice.isNotEmpty() || foodDescription.isNotEmpty() || foodIngredients.isNotEmpty()) {
                 uploadData()
                 Toast.makeText(this, "item added Successfully", Toast.LENGTH_SHORT).show()
-                startActivity(Intent(this, AdminMainActivity::class.java))
+                startActivity(Intent(this, AdminMainActivity::class.java)) 
             } else {
                 Toast.makeText(this, "Please fill all the fields", Toast.LENGTH_SHORT).show()
             }
