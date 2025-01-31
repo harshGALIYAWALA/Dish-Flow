@@ -11,11 +11,23 @@ import com.example.dishflow.R
 import com.example.dishflow.activities.PayOutActivity
 import com.example.dishflow.adaptar.CartAdapter
 import com.example.dishflow.databinding.FragmentCardBinding
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.FirebaseDatabase
 
 
 class CardFragment : Fragment() {
 
     private lateinit var binding: FragmentCardBinding
+    private lateinit var foodName: MutableList<String>
+    private lateinit var CartItemPrice: MutableList<String>
+    private lateinit var CartImages: MutableList<String>
+    private lateinit var CartDescription: MutableList<String>
+    private lateinit var quantity: MutableList<Int>
+
+    private lateinit var adapter: CartAdapter
+    private lateinit var auth: FirebaseAuth
+    private lateinit var database: FirebaseDatabase
+    private lateinit var UserID :String
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -25,11 +37,13 @@ class CardFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = FragmentCardBinding.inflate(inflater, container, false)
+        binding = FragmentCardBinding.inflate(inflater, container, false)]
 
-        val cartFoodName = listOf("burger", "pizza", "pasta", "cake")
-        val CartItemPrice = listOf("$10", "$15", "$20", "$25")
-        val CartImages = listOf(R.drawable.menu_item_food, R.drawable.menu_item_food02, R.drawable.menu_item_food, R.drawable.menu_item_food02)
+        auth = FirebaseAuth.getInstance()
+        database = FirebaseDatabase.getInstance()
+        UserID = auth.currentUser?.uid?:""
+
+
         val adapter = CartAdapter(ArrayList(cartFoodName), ArrayList(CartItemPrice), ArrayList(CartImages))
         binding.cartrecyclerView.layoutManager = LinearLayoutManager(requireContext())
         binding.cartrecyclerView.adapter = adapter

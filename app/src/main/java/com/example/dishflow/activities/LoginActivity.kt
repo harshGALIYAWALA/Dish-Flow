@@ -13,6 +13,7 @@ import androidx.core.view.WindowInsetsCompat
 import com.example.dishflow.R
 import com.example.dishflow.activities_Admin.AdminMainActivity
 import com.example.dishflow.databinding.ActivityLoginBinding
+import com.example.dishflow.models.UserUserModel
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
@@ -102,6 +103,9 @@ class LoginActivity : AppCompatActivity() {
                         // Log the successful Firebase sign-in
                         Log.d("googleSignIn", "signIn: Successful", authTask.exception)
 
+                        // save data to firebase
+                        saveUserDataToFirebaseDB()
+
                         // Navigate to the main activity of the admin panel
                         startActivity(Intent(this, MainActivity::class.java))
                         finish() // Close the login activity
@@ -120,6 +124,29 @@ class LoginActivity : AppCompatActivity() {
                 // Log the failure reason for Google Sign-In
                 Log.d("googleSignIn", "signIn: failure", task.exception)
             }
+        }
+    }
+
+    private fun saveUserDataToFirebaseDB() {
+        val user = auth.currentUser // Get the authenticated user
+        user?.let {
+            val userId = it.uid  // Get the user's unique ID
+            val userData = UserUserModel(
+                name = it.displayName,
+                email = it.email,
+                password = null
+            )
+
+            // Store user data in Realtime Database
+            database.child("user").child(userId).setValue(userData)
+                .addOnSuccessListener {
+                    Log.d("FirebaseDB", "User data stored successfully")
+                    Toast.makeText(this, "User data saved", Toast.LENGTH_SHORT).show()
+                }
+                .addOnFailureListener { e ->
+                    Log.e("FirebaseDB", "Failed to store user data", e)
+                    Toast.makeText(this, "Failed to save user data", Toast.LENGTH_SHORT).show()
+                }
         }
     }
 

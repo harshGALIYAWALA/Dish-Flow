@@ -77,6 +77,7 @@
         android:text="@string/description" />
 
     <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/addToCardButton"
         android:layout_width="325dp"
         android:layout_height="60dp"
         android:background="@drawable/green_btn"
