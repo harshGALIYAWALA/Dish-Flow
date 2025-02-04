@@ -48,6 +48,13 @@ class LoginActivity : AppCompatActivity() {
         auth = Firebase.auth
         database = Firebase.database.reference
 
+        // auto login if there is a user in (current.user)
+        if(auth.currentUser != null) {
+            startActivity(Intent(this, MainActivity::class.java))
+        } else {
+            startActivity(Intent(this, LoginActivity::class.java))
+        }
+
 
         //initialize google signIn
         @Suppress("DEPRECATION")

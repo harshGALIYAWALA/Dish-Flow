@@ -1,5 +1,6 @@
 package com.example.dishflow.activities
 
+import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
 import android.util.Log
@@ -55,6 +56,8 @@ class DetailsActivity : AppCompatActivity() {
         // add to card button
         binding.addToCardButton.setOnClickListener{
             addItemToCard()
+            startActivity(Intent(this, MainActivity::class.java))
+            finish()
         }
 
 
@@ -74,6 +77,7 @@ class DetailsActivity : AppCompatActivity() {
             foodPrice.toString(),
             foodDescription.toString(),
             foodImage.toString(),
+            foodIngredient.toString(),
             1
         )
         // save the cartItem to the database

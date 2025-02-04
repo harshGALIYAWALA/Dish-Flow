@@ -44,12 +44,6 @@ class AdminAddItemActivity : AppCompatActivity() {
         database = FirebaseDatabase.getInstance()
 
 
-
-//        binding.pickImageadmin.setOnClickListener{
-//            pickImage.launch(PickVisualMediaRequest(ActivityResultContracts.PickVisualMedia.ImageOnly))
-//            Log.d("imagePick", "onCreate:")
-//        }
-
         // add item button
         binding.addItemButton.setOnClickListener{
             //get data from field
@@ -122,16 +116,6 @@ class AdminAddItemActivity : AppCompatActivity() {
             Toast.makeText(this, "User not authenticated. Please log in.", Toast.LENGTH_SHORT).show()
         }
     }
-
-
-    // image selector from photo
-//    val pickImage = registerForActivityResult(ActivityResultContracts.PickVisualMedia()) {uri ->
-//        if(uri != null) {
-//            binding.selectedImage.setImageURI(uri)
-//        }
-//
-//
-//    }
 
 
 }

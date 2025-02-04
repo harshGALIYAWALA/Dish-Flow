@@ -20,6 +20,7 @@ class CartAdapter(private val CartItems:MutableList<String>,
                   private val CartImages:MutableList<String>,
                   private val CartDescription:MutableList<String>,
                   private val CartQuantity:MutableList<Int>,
+                  private val CartIngredients:MutableList<String>,
                   private val context: Context,
                     ):RecyclerView.Adapter<CartAdapter.CartViewHolder>() {
 
@@ -88,12 +89,14 @@ class CartAdapter(private val CartItems:MutableList<String>,
             if (itemQuantities[position] > 1){
                 itemQuantities[position]--
                 binding.cartItemQuantity.text = itemQuantities[position].toString()
+                updateQuantityInFirebase(position, itemQuantities[position]) // Update Firebase
             }
         }
         private fun incerementQuantity(position: Int){
             if (itemQuantities[position] < 9){
                 itemQuantities[position]++
                 binding.cartItemQuantity.text = itemQuantities[position].toString()
+                updateQuantityInFirebase(position, itemQuantities[position]) // Update Firebase
             }
         }
         private fun deleteItem(position: Int){
@@ -114,6 +117,7 @@ class CartAdapter(private val CartItems:MutableList<String>,
                     CartItemPrice.removeAt(position)
                     CartImages.removeAt(position)
                     CartDescription.removeAt(position)
+                    CartIngredients.removeAt(position)
                     CartQuantity.removeAt(position)
                     Toast.makeText(context,  "item deleted", Toast.LENGTH_SHORT).show()
 
@@ -149,6 +153,15 @@ class CartAdapter(private val CartItems:MutableList<String>,
 
             })
         }
+
+        private fun updateQuantityInFirebase(position: Int, newQuantity: Int) {
+            getUniqueKeyAtPosition(position) { uniqueKey ->
+                uniqueKey?.let {
+                    cartItemsRef.child(uniqueKey).child("foodQuantity").setValue(newQuantity)
+                }
+            }
+        }
+
     }
 
 }

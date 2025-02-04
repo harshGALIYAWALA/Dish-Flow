@@ -6,5 +6,4 @@ data class AllMenu(
     val foodDescription : String ?= null,
     val foodImage : String ?= null,
     val foodIngredients : String ?= null
-
 )

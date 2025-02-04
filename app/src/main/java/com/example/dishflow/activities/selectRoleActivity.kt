@@ -24,7 +24,7 @@ class selectRoleActivity : AppCompatActivity() {
 
 
         binding.selectUser.setOnClickListener{
-           intent = Intent(this, SignUpActivity::class.java)
+           intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
             VibrationUtils_button.vibrationSound(this, binding.selectUser)
         }
