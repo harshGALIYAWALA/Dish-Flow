@@ -10,6 +10,7 @@
     tools:context=".activities.PayOutActivity">
 
     <ImageView
+        android:id="@+id/backBtn"
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:src="@drawable/back_press_icon"
@@ -47,11 +48,14 @@
                 android:fontFamily="@font/metalmania_regular"/>
 
             <EditText
+                android:id="@+id/name"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="8dp"
                 android:background="@drawable/profile_edit_text"
-                android:text="Sam"/>
+                android:paddingLeft="10dp"
+                android:maxEms="10"
+                android:imeOptions="actionNext"/>
         </LinearLayout>
 
     </androidx.cardview.widget.CardView>
@@ -79,12 +83,16 @@
                 android:fontFamily="@font/metalmania_regular"/>
 
             <EditText
+                android:id="@+id/address"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="8dp"
                 android:background="@drawable/profile_edit_text"
                 android:inputType="textMultiLine"
-                android:hint="address..."/>
+                android:paddingLeft="10dp"
+                android:maxLines="5"
+                android:minLines="1"
+                android:scrollbars="vertical"/>
         </LinearLayout>
 
     </androidx.cardview.widget.CardView>
@@ -111,12 +119,13 @@
                 android:fontFamily="@font/metalmania_regular"/>
 
             <EditText
+                android:id="@+id/phone"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="8dp"
                 android:background="@drawable/profile_edit_text"
                 android:inputType="phone"
-                android:hint="830829323..."/>
+                android:paddingLeft="10dp"/>
         </LinearLayout>
 
     </androidx.cardview.widget.CardView>
@@ -148,6 +157,7 @@
                 android:layout_marginLeft="8dp"
                 android:background="@drawable/profile_edit_text"
                 android:inputType="phone"
+                android:paddingLeft="10dp"
                 android:text="Cash on Delivery"/>
         </LinearLayout>
 
@@ -176,12 +186,13 @@
                 android:fontFamily="@font/metalmania_regular"/>
 
             <EditText
+                android:id="@+id/totalAmount"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="8dp"
                 android:background="@drawable/profile_edit_text"
-                android:inputType="phone"
-                android:text="35$"/>
+                android:inputType="numberDecimal"
+                android:paddingLeft="10dp"/>
         </LinearLayout>
 
     </androidx.cardview.widget.CardView>

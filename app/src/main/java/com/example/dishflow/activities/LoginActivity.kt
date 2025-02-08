@@ -44,16 +44,18 @@ class LoginActivity : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(binding.root)
 
+        Log.d("login", "page has been opened")
+
         //initialize auth and database
         auth = Firebase.auth
         database = Firebase.database.reference
 
-        // auto login if there is a user in (current.user)
-        if(auth.currentUser != null) {
+        // Auto login if a user is already authenticated
+        if (auth.currentUser != null) {
             startActivity(Intent(this, MainActivity::class.java))
-        } else {
-            startActivity(Intent(this, LoginActivity::class.java))
+            finish()  // Close this activity to prevent returning to login
         }
+
 
 
         //initialize google signIn

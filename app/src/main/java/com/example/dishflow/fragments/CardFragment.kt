@@ -56,8 +56,10 @@ class CardFragment : Fragment() {
 
 
 
-        //Proceed set on clicl listen to PayOut Activity
+        //Proceed set on click listen to PayOut Activity
         binding.proceesBTN.setOnClickListener{
+            //get all the item quantity
+            getOrderItemDetail()
             val intent = Intent(requireContext(), PayOutActivity::class.java)
             startActivity(intent)
         }
@@ -67,6 +69,57 @@ class CardFragment : Fragment() {
 
 
         return binding.root
+    }
+
+    private fun getOrderItemDetail() {
+        val orderIdReference: DatabaseReference = database.reference.child("user").child(UserID).child("CartItems")
+        val foodName = mutableListOf<String>()
+        val foodPrice = mutableListOf<String>()
+        val foodImage = mutableListOf<String>()
+        val foodDescription = mutableListOf<String>()
+        val foodIngredients = mutableListOf<String>()
+        val foodQuantities = adapter.getUpdatedQuantities()
+
+        orderIdReference.addListenerForSingleValueEvent(object : ValueEventListener{
+            override fun onDataChange(snapshot: DataSnapshot) {
+                    for (foodSnapshot in snapshot.children) {
+                        //get the item detail
+                        val orderItem = foodSnapshot.getValue(CartItem::class.java)
+                        //add the item detail to the list
+                        orderItem?.foodName?.let { foodName.add(it) }
+                        orderItem?.foodPrice?.let { foodPrice.add(it) }
+                        orderItem?.foodImage?.let { foodImage.add(it) }
+                        orderItem?.foodDescription?.let { foodDescription.add(it) }
+                        orderItem?.foodIngredients?.let { foodIngredients.add(it) }
+                        orderNow(foodName, foodPrice, foodImage, foodDescription, foodIngredients, foodQuantities)
+                    }
+            }
+
+            override fun onCancelled(error: DatabaseError) {
+                Toast.makeText(context, "order making failed, please try again", Toast.LENGTH_SHORT).show()
+            }
+
+        })
+    }
+
+    private fun orderNow(
+        foodName: MutableList<String>,
+        foodPrice: MutableList<String>,
+        foodImage: MutableList<String>,
+        foodDescription: MutableList<String>,
+        foodIngredients: MutableList<String>,
+        foodQuantities: MutableList<Int>
+    ) {
+         if(isAdded && context != null) {
+             val intent = Intent(requireContext(), PayOutActivity::class.java)
+             intent.putStringArrayListExtra("foodItemName", foodName as ArrayList<String>)
+             intent.putStringArrayListExtra("foodItemPrice", foodPrice as ArrayList<String>)
+             intent.putStringArrayListExtra("foodItemImage", foodImage as ArrayList<String>)
+             intent.putStringArrayListExtra("foodItemDescription", foodDescription as ArrayList<String>)
+             intent.putStringArrayListExtra("foodItemIngredients", foodIngredients as ArrayList<String>)
+             intent.putIntegerArrayListExtra("foodItemQuantity", foodQuantities as ArrayList<Int>)
+             startActivity(intent)
+         }
     }
 
     private fun retrievedCartItems() {

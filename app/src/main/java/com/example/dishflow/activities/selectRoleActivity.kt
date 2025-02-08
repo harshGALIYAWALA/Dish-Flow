@@ -2,6 +2,7 @@ package com.example.dishflow.activities
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -24,7 +25,8 @@ class selectRoleActivity : AppCompatActivity() {
 
 
         binding.selectUser.setOnClickListener{
-           intent = Intent(this, MainActivity::class.java)
+            Log.d("login", "login page is opened")
+           intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)
             VibrationUtils_button.vibrationSound(this, binding.selectUser)
         }

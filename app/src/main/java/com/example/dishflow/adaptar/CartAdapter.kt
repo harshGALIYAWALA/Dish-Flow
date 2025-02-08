@@ -36,6 +36,7 @@ class CartAdapter(private val CartItems:MutableList<String>,
     }
 
     companion object {
+
         private var itemQuantities : IntArray = intArrayOf()
         private lateinit var cartItemsRef: DatabaseReference
     }
@@ -51,6 +52,11 @@ class CartAdapter(private val CartItems:MutableList<String>,
     }
 
     override fun getItemCount(): Int = CartItems.size
+
+    fun getUpdatedQuantities(): MutableList<Int> {
+        return CartQuantity.toMutableList()
+    }
+
 
     inner class CartViewHolder(private val binding: CartItemBinding): RecyclerView.ViewHolder(binding.root){
         fun bind(position: Int) {
@@ -163,5 +169,8 @@ class CartAdapter(private val CartItems:MutableList<String>,
         }
 
     }
+
+
+
 
 }
