@@ -2,6 +2,7 @@ package com.example.dishflow.fragments
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -31,7 +32,7 @@ class CardFragment : Fragment() {
     private lateinit var CartIngredients: MutableList<String>
     private lateinit var quantity: MutableList<Int>
 
-    private lateinit var adapter: CartAdapter
+    private lateinit var CartAdapter: CartAdapter
     private lateinit var auth: FirebaseAuth
     private lateinit var database: FirebaseDatabase
     private lateinit var UserID :String
@@ -49,6 +50,7 @@ class CardFragment : Fragment() {
         binding = FragmentCardBinding.inflate(inflater, container, false)
 
         auth = FirebaseAuth.getInstance()
+        UserID = auth.currentUser?.uid?:" "
         retrievedCartItems()
 
 
@@ -58,10 +60,11 @@ class CardFragment : Fragment() {
 
         //Proceed set on click listen to PayOut Activity
         binding.proceesBTN.setOnClickListener{
+            Log.d("CardFragment", "getOrderItemDetail is gonna be clicked")
             //get all the item quantity
             getOrderItemDetail()
-            val intent = Intent(requireContext(), PayOutActivity::class.java)
-            startActivity(intent)
+            Log.d("CardFragment", "getOrderItemDetail was success")
+
         }
 
 
@@ -78,7 +81,7 @@ class CardFragment : Fragment() {
         val foodImage = mutableListOf<String>()
         val foodDescription = mutableListOf<String>()
         val foodIngredients = mutableListOf<String>()
-        val foodQuantities = adapter.getUpdatedQuantities()
+        val foodQuantities = CartAdapter.getUpdatedQuantities()
 
         orderIdReference.addListenerForSingleValueEvent(object : ValueEventListener{
             override fun onDataChange(snapshot: DataSnapshot) {
@@ -151,9 +154,9 @@ class CardFragment : Fragment() {
 
                 }
 
-                val adapter = CartAdapter(foodName, CartItemPrice, CartImages, CartDescription, quantity, CartIngredients, requireContext())
+                CartAdapter = CartAdapter(foodName, CartItemPrice, CartImages, CartDescription, quantity, CartIngredients, requireContext())
                 binding.cartrecyclerView.layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
-                binding.cartrecyclerView.adapter = adapter
+                binding.cartrecyclerView.adapter = CartAdapter
             }
 
             override fun onCancelled(error: DatabaseError) {
