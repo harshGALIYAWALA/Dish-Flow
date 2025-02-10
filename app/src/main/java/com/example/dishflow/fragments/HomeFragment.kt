@@ -45,12 +45,16 @@ class HomeFragment : Fragment() {
             bottomSheetDialog.show(parentFragmentManager, "Test")
         }
 
+
         // retrieving data from firebase
         retrieveAndDisplayPolularItem()
 
 
+
         return binding.root
     }
+
+
 
     private fun retrieveAndDisplayPolularItem() {
         database = FirebaseDatabase.getInstance()

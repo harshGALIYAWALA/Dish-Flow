@@ -49,6 +49,20 @@ class PayOutActivity : AppCompatActivity() {
 
         setUserData()
 
+        //getting all the valurs from the intent
+        val intent = intent
+        foodItemName = intent.getStringArrayListExtra("foodItemName") as ArrayList<String>
+        foodItemPrice = intent.getStringArrayListExtra("foodItemPrice") as ArrayList<String>
+        foodItemImage = intent.getStringArrayListExtra("foodItemImage") as ArrayList<String>
+        foodItemDescription = intent.getStringArrayListExtra("foodItemDescription") as ArrayList<String>
+        foodItemIngredients = intent.getStringArrayListExtra("foodItemIngredients") as ArrayList<String>
+        foodItemQuantity = intent.getIntegerArrayListExtra("foodItemQuantity") as ArrayList<Int>
+        
+        totalAmount = totalAmountPrice().toString() + "Rs"
+//        binding.totalAmount.isEnabled = false
+        binding.totalAmount.setText(totalAmount)
+
+
        binding.placeMyOderBtn.setOnClickListener{
            val congraBottomFragment = CongratBottomFragment()
            congraBottomFragment.show(supportFragmentManager, "CongratBottomFragment")
@@ -60,6 +74,22 @@ class PayOutActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+    }
+
+    private fun totalAmountPrice(): Int {
+        var totalAmount = 0
+        for (i in 0 until foodItemPrice.size) {
+            val price = foodItemPrice[i]
+            val lastChar = price.last()
+            val priceIntVale = if(lastChar == '$'){
+                price.dropLast(1).toInt()
+            } else {
+                price.toInt()
+            }
+            var quantity = foodItemQuantity[i]
+            totalAmount += priceIntVale * quantity
+        }
+        return totalAmount
     }
 
     private fun setUserData() {
@@ -83,7 +113,7 @@ class PayOutActivity : AppCompatActivity() {
                 }
 
                 override fun onCancelled(error: DatabaseError) {
-                   //
+//                    Toast.makeText(baseContext, "something went wrong", Toast.LENGTH_SHORT).show()
                 }
 
             })
