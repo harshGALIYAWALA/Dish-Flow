@@ -13,14 +13,14 @@ Introducing our revolutionary Food Ordering App, designed to deliver a smooth, p
 - **🍽 Explore the Food World**:  Browse through diverse cuisines and dishes..
 - **🌟 Discover Popular Picks**:  Browse through diverse cuisines and dishes.  
 - **🔍 Quick Search**: Instantly find meals or cuisines with an intuitive search bar.In Progress 🚧)
-- **🛒 Add to Cart**: Add items to your cart for a hassle-free experience.In Progress 🚧)
+- **🛒 Add to Cart**: Add items to your cart for a hassle-free experience.
 - **🔄 Quantity Adjustment**:  Modify food quantities directly from the cart.In Progress 🚧)
-- **🗂 Cart Management**:  Review, edit, or remove items seamlessly.In Progress 🚧)
-- **✅ Seamless Checkout**:  Complete your order with an easy checkout process.In Progress 🚧)
+- **🗂 Cart Management**:  Review, edit, or remove items seamlessly.
+- **✅ Seamless Checkout**:  Complete your order with an easy checkout process.
 - **📝 Edit Order Details**: Update order preferences before checkout.In Progress 🚧)
 - **🕒 Recent Purchases**:  Quick access to your most recent orders.In Progress 🚧)
 - **🚚 Order Status Tracking**: Track your order in real-time from preparation to delivery.In Progress 🚧)
-- **🔧 Profile Update**: Update your user details for a personalized experience.In Progress 🚧)
+- **🔧 Profile Update**: Update your user details for a personalized experience.
 
 ---
 
@@ -32,13 +32,4 @@ Introducing our revolutionary Food Ordering App, designed to deliver a smooth, p
  
 ---
 
-##📷 Screenshots
-
-- User Sign-Up (Completed)
-![image](https://github.com/user-attachments/assets/5c4bde67-01f9-430a-a944-d8820ae948f2)
-- Food Listings <img width="279" alt="image" src="https://github.com/user-attachments/assets/2f69e755-e339-4498-a129-0e60840a9a71" />
-
-- Cart Management (In Progress 🚧)
-- Order Tracking (In Progress 🚧)
-- Admin Dashboard (In Progress 🚧)
 
